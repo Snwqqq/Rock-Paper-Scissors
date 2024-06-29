@@ -2,7 +2,7 @@
 //create value witch will store user input + add value for win
 let score = 0;
 let lastScore=0;
-while(score!=3 || score!=-3){
+while(score!=3 && score!=-3){
 let userChoice;
 let userWin=false;
 //give numeric const to rock,paper, scissorc
@@ -148,10 +148,12 @@ if(lastScore!=score)
     {
 if(userWin){
     alert("YOU WIN!\n" + " Score: " + score);
+    lastScore=score;
 }
 else
 {
     alert("YOU LOOSE!\n" + " Score: " + score);
+    lastScore=score;
 }
  }
  else{
@@ -160,7 +162,11 @@ else
 
 }
 
-alert("GAME OVER!");
+
+if(score===3)
+alert("GAME OVER! YOU WIN");
+else
+alert("GAME OVER! YOU LOOSE!");
 //create switch and based on user input check who win or tie
 //display result to the user
 //increase score if not a tie
