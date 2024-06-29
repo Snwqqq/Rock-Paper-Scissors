@@ -2,6 +2,7 @@
 //create value witch will store user input + add value for win
 let score = 0;
 let lastScore=0;
+let falseValue=false;
 while(score!=3 && score!=-3){
 let userChoice;
 let userWin=false;
@@ -20,130 +21,73 @@ if(!userChoice){
 }
 
 
-    userChoice = userChoice.toUpperCase();
+userChoice = userChoice.toUpperCase();
     //alert(userChoice);
+
     switch(userChoice){
-    case "ROCK": 
-        switch(pcChoice){
-            case ROCK:
-                 alert("PC CHOSE ROCK");    
-            break;
-            case PAPER:
-                alert("PC CHOSE PAPER");
-                userWin = false;
-                score--;
-            break
-            case SCISSORS:
-                alert("PC CHOSE SCISSORS");
-                score++;
-                userWin = true;
-            break;
-        }
-    break;
-
-    case "PAPER": 
-    switch(pcChoice){
-        case ROCK:
-             alert("PC CHOSE ROCK");
-             score++;
-             userWin = true;
- 
-        break;
-        case PAPER:
-            alert("PC CHOSE PAPER");
-        break
-        case SCISSORS:
-            alert("PC CHOSE SCISSORS");
-            score--;
-            userWin = false;
-        break;
-    }
-    break;
-    case "SCISSORS":
-        switch(pcChoice){
-            case ROCK:
-                 alert("PC CHOSE ROCK");
-                 score--;
-                 userWin = false;
-            break;
-            case PAPER:
-                alert("PC CHOSE PAPER");
-                score++;
-                userWin = true;
-                alert("YOU WIN!");
-            break
-            case SCISSORS:
-                alert("PC CHOSE SCISSORS");
-            break;
-        }
-    break;
-    default:
-        userChoice = +userChoice;
-    break;
-                    }
-
-        
-        switch(userChoice){
-            case ROCK: 
-                switch(pcChoice){
-                    case ROCK:
-                         alert("PC CHOSE ROCK");
-                    break;
-                    case PAPER:
-                        alert("PC CHOSE PAPER");
-                        score--;
-                        userWin = false;
-                    break
-                    case SCISSORS:
-                        alert("PC CHOSE SCISSORS");
-                        score++;
-                        userWin = true;
-                    break;
-                }
-            break;
-        
-            case PAPER: 
+        case "ROCK": 
+        case "1":
             switch(pcChoice){
-                case ROCK:
-                     alert("PC CHOSE ROCK");
-                     score++;
-                     userWin = true;
-         
+                case ROCK: 
+                alert("PC CHOOSE ROCK!")
                 break;
                 case PAPER:
-                    alert("PC CHOSE PAPER");
+                    alert("PC CHOOSE PAPER!")
+                    userWin = false;
+                    score--;
                 break
                 case SCISSORS:
-                    alert("PC CHOSE SCISSORS");
-                    score--;
-                    userWin = false;
+                    alert("PC CHOOSE SCISSORS!")
+                    score++;
+                    userWin = true;
                 break;
             }
+        break;
+    
+        case "PAPER": 
+        case "2":
+        switch(pcChoice){
+            case ROCK:
+                alert("PC CHOOSE ROCK!")
+                 score++;
+                 userWin = true;
             break;
+            case PAPER:
+                alert("PC CHOOSE PAPER!")
+            break
             case SCISSORS:
-                switch(pcChoice){
-                    case ROCK:
-                         alert("PC CHOSE ROCK");
-                         score--;
-                         userWin = false;
-                    break;
-                    case PAPER:
-                        alert("PC CHOSE PAPER");
-                        score++;
-                        userWin = true;
-
-                    break
-                    case SCISSORS:
-                        alert("PC CHOSE SCISSORS");
-                    break;
-                }
+                alert("PC CHOOSE SCISSORS!")
+                score--;
+                userWin = false;
             break;
-            default:
-                alert("INVALID CHOICE TRY AGAIN 2");
-                continue;
+        }
+        break;
+        case "SCISSORS":
+        case "3":
+            switch(pcChoice){
+                case ROCK:
+                    alert("PC CHOOSE ROCK!")
+                     score--;
+                     userWin = false;
+                break;
+                case PAPER:
+                    alert("PC CHOOSE PAPER!")
+                    score++;
+                    userWin = true;
+                break
+                case SCISSORS:
+                    alert("PC CHOOSE SCISSORS!")
+                break;
+            }
+        break;
+        default:
+            alert("INVALID CHOICE TRY AGAIN");
+            falseValue=true;
+        break;
 
-}
+                        }    
 
+if(!falseValue){
 if(lastScore!=score)
     {
 if(userWin){
@@ -159,7 +103,11 @@ else
  else{
     alert("IT'S A TIE! TRY AGAIN!\n" + " Score: " + score);
  }
-
+}
+else
+{
+    falseValue=false;
+}
 }
 
 
@@ -167,6 +115,8 @@ if(score===3)
 alert("GAME OVER! YOU WIN");
 else
 alert("GAME OVER! YOU LOOSE!");
+
+
 //create switch and based on user input check who win or tie
 //display result to the user
 //increase score if not a tie
