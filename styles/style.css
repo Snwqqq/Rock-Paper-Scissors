@@ -1,0 +1,145 @@
+body{
+    padding: 0;
+    margin: 0;
+    height:100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-size: cover; /* Makes sure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */ 
+
+}
+.background-img{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.8;  
+}
+.body-wrapper {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+.score{
+    position: absolute;
+    top:0;
+    left: 0;
+    color: rebeccapurple;
+    opacity: 1;
+    font-size: 60px;
+    z-index: 200;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.5);
+}
+.swords-icon{
+    width: 100px;
+    position: absolute;
+    z-index: 300;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.player{
+    background-color: black;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 10px 0px 10px rgba(0,0,0,1);
+}
+.pc{
+    background-color: black;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    font-size: 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 10px 0px 10px rgba(0,0,0,1);
+}
+
+.end{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    position: absolute;
+    z-index: 400;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.end-p{
+    font-size: 30px;
+}
+
+.enemy-screen{
+display: flex;
+border:  5px solid black;
+flex:1;
+justify-content: center;
+align-items: start;
+}
+
+.player-screen{
+display: flex;
+border:  5px solid black;
+flex:1;
+justify-content: center;
+align-items: end;
+}
+
+.player-choise-screen,
+.enemy-choise-screen{
+    display: flex;
+    gap: 15px;
+}
+.enemy-choise-screen{
+    opacity: 0.8;
+}
+
+.rock-img,
+.scissor-img,
+.paper-img{
+    border:  5px dashed black;
+}
+.container{
+    position: relative;
+}
+.container:hover .paper-text{
+    opacity: 1;
+}
+
+
+.paper-text{
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+color: white;
+background-color: black;
+font-size: 50px;
+padding: 10px 20px;
+border-radius: 10px;
+box-shadow: 10px 0px 10px rgba(0,0,0,1);
+opacity: 0;
+}
+
+
