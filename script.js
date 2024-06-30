@@ -5,6 +5,8 @@ const paperContainer = document.querySelector('.container-paper');
 const scissorsContainer = document.querySelector('.container-scissors');
 const rockContainer = document.querySelector('.container-rock');
 const playerChoiseScreen = document.querySelector('.player-choise-screen');
+const end = document.querySelector('.end');
+const endText= document.querySelector('end-text');
 let score = 0;
 let lastScore=0;
 let falseValue=false;
@@ -76,7 +78,7 @@ playerChoiseScreen.addEventListener("mouseover", (event)=>{
 //random a value from the computer 1to3
 function playRPS()
 {
-    let pcChoice= Math.round((Math.random()*2)+1);
+    let pcChoice=1; //Math.round((Math.random()*2)+1);
 
 
     switch(userChoice){
@@ -156,13 +158,16 @@ else
 {
     falseValue=false;
 }
-
+scoreElement.textContent=`Score: ${score}`;
 
 
 if(score===3)
-alert("GAME OVER! YOU WIN");
-if(score===-3)
-alert("GAME OVER! YOU LOOSE!");
+end.style.opacity =1;
+endText.textContent = "YOU WIN!";
+if(score===-3){
+endText.textContent = "YOU LOSE!";
+end.style.opacity =1;
+}
 }
 //create switch and based on user input check who win or tie
 //display result to the user
