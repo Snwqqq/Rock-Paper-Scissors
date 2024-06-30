@@ -120,13 +120,11 @@ align-items: end;
 .paper-img{
     border:  5px dashed black;
 }
-.container{
+.container-paper,
+.container-scissors,
+.container-rock{
     position: relative;
 }
-.container:hover .paper-text{
-    opacity: 1;
-}
-
 
 .paper-text{
 position: absolute;
