@@ -78,7 +78,7 @@ playerChoiseScreen.addEventListener("mouseover", (event)=>{
 //random a value from the computer 1to3
 function playRPS()
 {
-    let pcChoice=1; //Math.round((Math.random()*2)+1);
+    let pcChoice= Math.round((Math.random()*2)+1);
 
 
     switch(userChoice){
