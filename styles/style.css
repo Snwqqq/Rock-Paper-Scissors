@@ -1,3 +1,13 @@
+
+@font-face {
+    font-family: 'introrustg-base2line';
+    src: url('/Fonst/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2') format('woff2'),
+         url('/Fonst/introrustg_base2line_macroman/introrustg-base2line-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html{
     box-sizing: border-box;
     margin: 0;
@@ -30,6 +40,7 @@ body{
     z-index: 100;
 }
 .score{
+    font-family: 'introrustg-base2line';
     position: absolute;
     top:0;
     left: 0;
@@ -52,6 +63,7 @@ body{
 
 }
 .player{
+    font-family: 'introrustg-base2line';
     background-color: black;
     position: fixed;
     right: 1vh;
@@ -64,6 +76,7 @@ body{
     z-index: 400;
 }
 .pc{
+    font-family: 'introrustg-base2line';
     background-color: black;
     position: fixed;
     right: 1vh;
@@ -138,6 +151,7 @@ align-items: end;
 }
 
 .paper-text{
+font-family: 'introrustg-base2line';
 position: absolute;
 left: 50%;
 top: 50%;
