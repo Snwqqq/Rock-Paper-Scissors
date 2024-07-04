@@ -46,12 +46,12 @@ body{
     left: 0;
     color: rebeccapurple;
     opacity: 1;
-    font-size: 6vh;
+    font-size: min(6vh,6vw);
     z-index: 400;
     background-color: black;
-    padding: 1vh 2vh;
+    padding: min(1vh,1vw) min(2vh,2vw);
     border-radius: 10px;
-    box-shadow:0.5vh 1vh 1vh rgba(0,0,0,0.5);
+    box-shadow:min(0.5vh,0.5vw) min(1vh,1vw) min(1vh,1vw) rgba(0,0,0,0.5);
 }
 .swords-icon{
     width: 10vh;
@@ -66,11 +66,11 @@ body{
     font-family: 'introrustg-base2line';
     background-color: black;
     position: fixed;
-    right: 1vh;
-    bottom: 1vh;
+    right: min(1vh,1vw);
+    bottom: min(1vh,1vw);
     color: white;
-    font-size: 5vh;
-    padding: 1vh 2vh;
+    font-size: min(5vh,5vw);
+    padding: min(1vh,1vw) min(2vh,1vw);
     border-radius: 10px;
     box-shadow: 10px 0px 10px rgba(0,0,0,1);
     z-index: 400;
@@ -79,11 +79,11 @@ body{
     font-family: 'introrustg-base2line';
     background-color: black;
     position: fixed;
-    right: 1vh;
-    top: 1vh;
+    right: min(1vh,1vw);
+    top: min(1vh,1vw);
     color: white;
-    font-size: 5vh;
-    padding: 1vh 2vh;
+    font-size: min(5vh,5vw);
+    padding: min(1vh,1vw) min(2vh,2vw);
     border-radius: 10px;
     box-shadow: 10px 0px 10px rgba(0,0,0,1);
     z-index: 400;
@@ -103,18 +103,18 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 8vh;
+    font-size: min(8vh,8vw);
     text-align: center;
     opacity: 0;
     pointer-events: none;
 }
 .end-p{
-    font-size: 3vh;
+    font-size: min(3vh,3vw);
 }
 
 .enemy-screen{
 display: flex;
-border:  0.5vh solid black;
+border:  min(0.5vh,0.5vw) solid black;
 flex:1;
 justify-content: center;
 align-items: start;
@@ -122,7 +122,7 @@ align-items: start;
 
 .player-screen{
 display: flex;
-border:  0.5vh solid black;
+border:  min(0.5vh,0.5vw) solid black;
 flex:1;
 justify-content: center;
 align-items: end;
@@ -131,7 +131,7 @@ align-items: end;
 .player-choise-screen,
 .enemy-choise-screen{
     display: flex;
-    gap: 1.5vh  ;
+    gap: min(1.5vh,1.5vw);
 }
 .enemy-choise-screen{
     opacity: 0.8;
@@ -140,9 +140,9 @@ align-items: end;
 .rock-img,
 .scissor-img,
 .paper-img{
-    width: 30.7vh;
-    height: 44.8vh;
-    border:  0.5ph dashed black;
+    width: min(30.7vh,30.7vw);
+    height: min(44.8vh,44.8vw);
+    border:  min(0.5vh,0.5vw) dashed black;
 }
 .container-paper,
 .container-scissors,
@@ -158,112 +158,19 @@ top: 50%;
 transform: translate(-50%, -50%);
 color: white;
 background-color: black;
-font-size: 5vh;
-padding: 1vh 2vh;
+font-size: min(5vh,5vw);
+padding: min(1vh,1vw) min(2vh,2vw);
 border-radius: 10px;
-box-shadow: 1vh 0px 1vh rgba(0,0,0,1);
+box-shadow: min(1vh,1vw) 0px min(1vh,1vww) rgba(0,0,0,1);
 opacity: 0;
 }
 
 
 @media screen and (orientation: portrait) {
     /* Your styles for when the height is greater than the width */
-    .rock-img,
-    .scissor-img,
-    .paper-img{
-        width: 30.7vw;
-        height: 44.8vw;
-        border:  0.5vw dashed black;
-        margin: 40px 0px;
-    }
 
     .paper-text{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        background-color: black;
-        font-size: 5vw;
-        padding: 1vw 2vw;
-        border-radius: 10px;
-        box-shadow: 1vw 0px 1vw rgba(0,0,0,1);
         opacity: 1;
         }
-        
-    .player-choise-screen,
-    .enemy-choise-screen{
-    display: flex;
-    gap: 1.5vw;
-    }
-    .end-p{
-        font-size: 3vw;
-    }
-    .player{
-        background-color: black;
-        position: fixed;
-        right: 1vw;
-        bottom: 1vw;
-        color: white;
-        font-size: 5vw;
-        padding: 1vh 2vh;
-        border-radius: 10px;
-        box-shadow: 1vw 0px 1vw rgba(0,0,0,1);
-        z-index: 400;
-    }
-    .pc{
-        background-color: black;
-        position: fixed;
-        right: 1vw;
-        top: 1vw;
-        color: white;
-        font-size: 5vw;
-        padding: 1vw 2vw;
-        border-radius: 10px;
-        box-shadow: 1vw 0px 1vw rgba(0,0,0,1);
-        z-index: 400;
-    }
-    
-    .end{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        background-color: black;
-        position: absolute;
-        z-index: 400;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 8vw;
-        text-align: center;
-        opacity: 0;
-        pointer-events: none;
-    }
-    .score{
-        position: absolute;
-        top:0;
-        left: 0; 
-        color: rebeccapurple;
-        opacity: 1;
-        font-size: 6vw;
-        z-index: 400;
-        background-color: black;
-        padding: 1vw 2vw;
-        border-radius: 10px;
-        box-shadow:0.5vw 1vw 1vw rgba(0,0,0,0.5);
-    }
-    .swords-icon{
-        width: 10vh;
-        position: absolute;
-        z-index: 300;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    
-    }
-    
+   
 }
